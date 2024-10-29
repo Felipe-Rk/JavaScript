@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de dados 02</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Digite seu nome: ')
+        var n1 = Number(window.prompt("Qual seu sálario: "))
+        
+        document.write(`Seja bem vindo(a) ${nome}! Seu nome tem ${nome.length} total de letras. <br> `)
+        document.write(`Seu nome em Maiúsculo: ${nome.toUpperCase()} <br>`)
+        document.write(`Seu nome em Minúsculo: ${nome.toLowerCase()} <br>`)
+
+        // n1.toFixed(2).replace('.', ',')
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        document.write(`${nome} seu salário em Reais é ${n1}`)
+    </script>
+</body>
+</html>
