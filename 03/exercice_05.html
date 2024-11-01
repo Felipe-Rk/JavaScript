@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passos com DOM</title>
+</head>
+<body>
+    <h1 name="msg">Estudos com DOM</h1>
+    <p>Aqui vai o resultado:</p>
+    <p class="parag">Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique aqui</div>
+
+    <script>
+
+        var corpo = document.body
+
+        //seleção por tag, [0] = define qual paragrafo ira selecionar
+        var p1 = document.getElementsByTagName('p')[0] 
+        document.write('esta sendo apresentado assim: ' + p1.innerText) //p1.innerText apresenta o texto dentro do paragrafo
+        var p2 = document.getElementsByTagName('p')[1]
+        document.write('esta sendo apresentado assim: ' + p2.innerHTML) //p1.innerHtml apresenta o texto formatado dentro do paragrafo            
+        
+        //mudar estilo diretamente na variavel 
+        p1.style.color = 'green'
+        corpo.style.backgroundColor = 'with'
+
+        //--------------------------------------------------------
+        //SELEÇÂO POR ID
+        var d = document.getElementById('msg') // seleção por ID
+        d.style.backgroundColor = 'blue'
+        d.innerText = 'Estou aguardando...' // mudando o conteudo
+       
+        //outra forma de mudar ( window.document.getElementById('msg')).innerText = 'Ola!'
+
+        //--------------------------------------------------------
+        // SELEÇÂO POR NOME
+
+        var nome = document.getElementsByName('msg')
+        nome.style.color = 'orange'
+        
+        //--------------------------------------------------------
+        //SELEÇÂO POR CLASS
+
+        var classe = document.getElementsByClassName('parag')
+        classe.style.backgroundColor = 'red'
+
+        //--------------------------------------------------------
+        //SELEÇÂO POR CLASS
+
+    </script>
+</body>
+</html>
