@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>CONDIÇÔES SIMPLES</title>
+</head>
+<body>
+    <h1>Verificar nacionalidade</h1>
+    Qual seu pais de origem?<br>
+    <input type="text" name="nacio" id="nacio" >
+    <input type="button" value="Verificar" id="verif">
+    <div><strong>Nacionalidade:</strong></div>
+    <p id="result"></p>
+    
+<script>
+    verif.addEventListener('click',verificar)
+
+    function verificar(){
+        resultado = document.getElementById('result')
+        verif = document.getElementById('verif')
+        nac = document.getElementById('nacio');
+        naci = (nac.value)
+ 
+        
+        if (naci == "Brasil"){
+            console.log(`Você nasceu no ${naci}!`);
+            console.log('Você é Brasileiro!');
+            resultado.innerHTML = `<p>Você nasceu no <strong>${naci}!</strong> </p>`
+            resultado.innerHTML +=`<p>Você é <strong>Brasileiro!</strong></p>`
+        } else {
+            console.log(`Você nasceu no ${naci}!`)
+            console.log('Você é Estrangeiro')
+            resultado.innerHTML = `<p>Você nasceu no <strong>${naci}!</strong> </p>` 
+            resultado.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+        }
+    }
+
+</script>
+</body>
+</html>
