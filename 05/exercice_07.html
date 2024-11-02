@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+
+    <style>
+        body{
+            background-color:rgb(117, 116, 117);
+            justify-content: center;
+            align-items: center;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        h1 {
+            font:normal 30pt Arial;
+            text-align: center;
+        }
+
+        .container {
+            align-items: center;
+            text-align: center;
+            font:normal 30pt Arial;
+            border-style:inset;
+            border-width: 10px;
+            margin-left: 150px;
+            margin-right: 150px;
+                      
+        }
+        
+        input {
+            margin-top: 50px;
+            width: 100px;
+            height: 80px;
+            font:normal 20pt Arial;
+            border-radius: 10%;
+            border-style: hidden;
+            border-color: black;
+        }
+
+        #calcular {
+           font:normal 15pt Arial;
+           width: 120px;
+           height: 60px;
+           background-color: rgb(58, 100, 62);
+           color: white;
+           border-color:rgb(0, 0, 0) ;
+           border-radius: 10%;
+           border-style:hidden;
+           
+        }
+
+        #calcular:hover{
+            background-color: blue;
+            cursor:pointer;
+        }
+
+        #res{
+            align-items: center;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Somando Números</h1>
+    <div class="container">
+        <div>
+            <input type="number" name="txn1" id="txn1" placeholder="0"> +
+            <input type="number" name="txn2" id="txn2" placeholder="0">
+            <button type="button" name="calcular" id="calcular" onclick="calcular()">Somar</button>
+            
+        </div>
+        <div name="res" id="res">
+            <p>Resultado</p>
+        </div>
+    </div>
+
+    <script>
+        
+        function calcular(){
+            
+            var tx1 = document.getElementById('txn1')
+            var tx2 = document.getElementById('txn2')
+            var result = document.querySelector('div#res')
+            var tn1 = Number(tx1.value)
+            var tn2 = Number(tx2.value)
+
+            resultado = tn1 + tn2
+            result.innerHTML =`A soma entre ${tn1} e ${tn2} é <strong> ${resultado} </strong> `
+
+        }
+
+    </script>
+</body>
+</html>
