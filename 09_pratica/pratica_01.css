@@ -1,0 +1,46 @@
+body{
+    background: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+
+}
+
+.container{
+    text-align: center;
+    align-items: center;
+    width: 800px;
+    margin: auto;
+    padding: 45px;
+}
+
+div{
+    padding: 8px;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.329);
+    background: rgb(150, 149, 149);
+
+}
+
+#imagem{
+    width: 780px;
+}
+
+#msg{
+    font: 35pt normal Arial;
+}
+
+#saudac{
+    font: 35pt normal Arial;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
